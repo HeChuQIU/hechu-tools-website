@@ -42,7 +42,7 @@ const FileUpload: React.FC<FileUploadProps> = ({onChange,accept = "*"}: FileUplo
                         <div className={"btn bg-primary"} onClick={() => setFile(null)}>重新选择</div>
                     </div>
                 ) : (
-                    <p className={"card-title"}>拖放文件到此处或点击选择文件 [自动部署] </p>
+                    <p className={"card-title"}>拖放文件到此处或点击选择文件</p>
                 )}
                 <input
                     type="file"
