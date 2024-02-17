@@ -33,6 +33,8 @@ jobs:
       - name: Deploy
         uses: easingthemes/ssh-deploy@v2.0.7
         env:
+          CI: true
+        with:
           SSH_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN }}
           ARGS: "-avz --delete"
           SOURCE: "/"
@@ -43,4 +45,3 @@ jobs:
             ./run.sh --stop
           SCRIPT_AFTER: |
             ./run.sh --start
-          CI: true
