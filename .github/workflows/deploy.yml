@@ -29,12 +29,12 @@ jobs:
         env:
           CI: true
 
-      - name: next start
-        run: |
-          ./run.sh --stop
-          ./run.sh --start
-        env:
-          CI: true
+#      - name: next start
+#        run: |
+#          ./run.sh --stop
+#          ./run.sh --start
+#        env:
+#          CI: true
 
       # Deploy
       - name: Deploy
