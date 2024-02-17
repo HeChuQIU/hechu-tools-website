@@ -15,7 +15,7 @@ jobs:
       - uses: srt32/git-actions@v0.0.3
         with:
           args: git submodule update --init --recursive
-      # 使用 node:10
+      # 使用 node:18
       - name: use Node.js 18
         uses: actions/setup-node@v1
         with:
