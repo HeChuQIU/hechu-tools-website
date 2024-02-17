@@ -23,12 +23,14 @@ case "$1" in
         # 启动项目
         echo "启动 $project_name 项目..."
         cd "$project_directory" || exit
+        echo "执行命令: $start_command"
         $start_command &
         ;;
     --stop)
         # 停止项目
         echo "停止 $project_name 项目..."
-        pkill -f "$start_command"
+        echo "执行命令: pkill -f \"next-server\""
+        pkill -f "next-server"
         ;;
     *)
         echo "未知参数: $1"
